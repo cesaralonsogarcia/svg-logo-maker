@@ -1,7 +1,9 @@
 // Packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-// const svg = require('svg');
+const svg = require('svg.js');
+
+const shapes = require('./lib/shapes.js');
 
 // Array of questions for user input
 const questions = [
