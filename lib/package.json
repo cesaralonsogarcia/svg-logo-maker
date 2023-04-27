@@ -1,0 +1,19 @@
+{
+  "name": "lib",
+  "version": "1.0.0",
+  "description": "",
+  "main": "shapes.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cesaralonsogarcia/svg-logo-maker.git"
+  },
+  "author": "Cesar Alonso Garcia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cesaralonsogarcia/svg-logo-maker/issues"
+  },
+  "homepage": "https://github.com/cesaralonsogarcia/svg-logo-maker#readme"
+}
