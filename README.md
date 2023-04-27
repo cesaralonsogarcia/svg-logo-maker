@@ -30,3 +30,5 @@ THEN I am shown a 300x200 pixel image that matches the criteria I entered
 ## Walkthrough Video
 
 ## Tests
+
+This application uses the Jest Package to test the Triangle, Square, and Circle classes.
