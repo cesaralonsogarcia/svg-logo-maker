@@ -34,13 +34,45 @@ const questions = [
     },
 ];
 
-// Function to initialize the app
+// Function to initialize the app and prompt user for input
 function init() {
 inquirer
     .prompt(questions)
     .then(answers => {
-        console.log(answers);
+        if(answers.name.length > 3) {
+            return console.log('Error: This application only works with up to 3 characters.');
+        }
+        const shapeColor = hexCheck(answers.shapeColor);
+        const nameColor = hexCheck(answers.nameColor);
+        if(answers.shape[0] === 'Circle') {
+            const circle = new shapes.Circle(shapeColor, answers.name, nameColor).render();
+            fs.writeFile(`./examples/${answers.name}.svg`, circle, (err) =>
+            err ? console.log(err) : console.log(`Generated ${answers.name}_logo.svg`)
+            );
+        } else if(answers.shape[0] === 'Square') {
+            const square = new shapes.Square(shapeColor, answers.name, nameColor).render();
+            fs.writeFile(`./examples/${answers.name}.svg`, square, (err) =>
+            err ? console.log(err) : console.log(`Generated ${answers.name}_logo.svg`)
+            );
+        } else if(answers.shape[0] === 'Triangle') {
+            const triangle = new shapes.Triangle(shapeColor, answers.name, nameColor).render();
+            fs.writeFile(`./examples/${answers.name}.svg`, triangle, (err) =>
+            err ? console.log(err) : console.log(`Generated ${answers.name}_logo.svg`)
+            );
+        } else {
+            return console.log('Error: No shape was selected!');
+        }
     })
+};
+
+// Function that checks if color is hexadecimal
+function hexCheck(input) {
+    const regex = /[0-9A-Fa-f]{6}/g;
+    if(input.match(regex)){
+        return `#${input}`;
+    } else {
+        return input;
+    }
 }
 
 init();
