@@ -31,8 +31,7 @@ THEN I am shown a 300x200 pixel image that matches the criteria I entered
 
 Click on the image to navigate to the video
 
-
-https://watch.screencastify.com/v/HhZZYAq0aeZ4fUwNOv0V
+[<img src='https://github.com/cesaralonsogarcia/svg-logo-maker/blob/main/images/svg-logo-maker.png'>](https://watch.screencastify.com/v/HhZZYAq0aeZ4fUwNOv0V "SVG Logo Maker")
 
 ## Tests
 
