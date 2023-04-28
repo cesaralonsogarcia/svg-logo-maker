@@ -46,17 +46,17 @@ inquirer
         const nameColor = hexCheck(answers.nameColor);
         if(answers.shape[0] === 'Circle') {
             const circle = new shapes.Circle(shapeColor, answers.name, nameColor).render();
-            fs.writeFile(`./examples/${answers.name}.svg`, circle, (err) =>
+            fs.writeFile(`./examples/${answers.name}_logo.svg`, circle, (err) =>
             err ? console.log(err) : console.log(`Generated ${answers.name}_logo.svg`)
             );
         } else if(answers.shape[0] === 'Square') {
             const square = new shapes.Square(shapeColor, answers.name, nameColor).render();
-            fs.writeFile(`./examples/${answers.name}.svg`, square, (err) =>
+            fs.writeFile(`./examples/${answers.name}_logo.svg`, square, (err) =>
             err ? console.log(err) : console.log(`Generated ${answers.name}_logo.svg`)
             );
         } else if(answers.shape[0] === 'Triangle') {
             const triangle = new shapes.Triangle(shapeColor, answers.name, nameColor).render();
-            fs.writeFile(`./examples/${answers.name}.svg`, triangle, (err) =>
+            fs.writeFile(`./examples/${answers.name}_logo.svg`, triangle, (err) =>
             err ? console.log(err) : console.log(`Generated ${answers.name}_logo.svg`)
             );
         } else {
